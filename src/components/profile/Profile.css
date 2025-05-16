@@ -1,0 +1,273 @@
+.profile-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  background-color: var(--primary-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.profile-title {
+  flex: 1;
+}
+
+.profile-title h1 {
+  color: var(--dark-blue);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--light-gray);
+  color: var(--dark-blue);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.edit-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--primary-blue);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-button:hover {
+  transform: scale(1.1);
+  background-color: var(--dark-blue);
+}
+
+.edit-button.editing {
+  background-color: var(--coral-red);
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: translateX(5px);
+  background-color: #e8f4ff;
+}
+
+.detail-icon {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+.detail-content {
+  flex: 1;
+}
+
+.detail-content label {
+  display: block;
+  color: var(--dark-gray);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.detail-content p {
+  color: var(--dark-gray);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.edit-input:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 162, 249, 0.2);
+}
+
+.address-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.save-btn, .cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+}
+
+.save-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.cancel-btn {
+  background-color: #f8f9fa;
+  color: var(--dark-gray);
+  border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+  background-color: #e9ecef;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background-color: var(--light-gray);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  color: var(--dark-gray);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-number {
+  color: var(--primary-blue);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 1rem;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-title h1 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-button {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .save-btn, .cancel-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,109 @@
+.emergency-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.contact-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.phone-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #0056b3;
+}
+
+.call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.call-btn:hover, .call-btn:focus {
+  background-color: #c82333;
+  color: white;
+  text-decoration: none;
+}
+
+.call-btn:active {
+  transform: scale(0.98);
+}
+
+.teams-table {
+  margin-top: 20px;
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.status.active {
+  background-color: #28a745;
+  color: white;
+}
+
+.status.standby {
+  background-color: #ffc107;
+  color: black;
+}
+
+.status.on.mission {
+  background-color: #17a2b8;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .phone-number {
+    font-size: 20px;
+  }
+}

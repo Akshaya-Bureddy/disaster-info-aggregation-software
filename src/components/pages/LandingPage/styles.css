@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #364fc7;
+    --secondary-color: #4263eb;
+}
+
+.navbar {
+    background-color: rgba(0, 29, 174, 0.9) !important;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+/* Add these styles for floating icons */
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.floating-icon {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.2);
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.hero-section {
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #364fc7, #4263eb, #364fc7, #4263eb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.features-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.feature-card {
+    padding: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.feature-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-section h5 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.image-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.image-section img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.footer-links li {
+    cursor: default;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
