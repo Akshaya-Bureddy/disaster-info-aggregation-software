@@ -6,7 +6,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import DisasterFeed from './components/feed/DisasterFeed';
 import Categories from './components/categories/Categories';
 import Analytics from './components/analytics/Analytics';
-import Settings from './components/settings/Settings';
+import Settings from './components/Settings/Settings';
 import ReportDisaster from './components/report/ReportDisaster';
 import Emergency from './components/emergency/Emergency';
 import SafetyGuides from './components/safety/SafetyGuides';
