@@ -38,7 +38,7 @@ const app = express();
 const httpServer = createServer(app);
 
 // Move static file serving to the top, before API routes
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, '../dist')));//app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.use(cors({
   origin: ['http://localhost:5174', 'http://localhost:5173'],
@@ -124,7 +124,7 @@ app.use('/', indexRoutes);
 
 // Serve React app for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+  res.sendFile(path.join(__dirname, '../index.html'));//res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });
 
 app.use((err, req, res, next) => {
